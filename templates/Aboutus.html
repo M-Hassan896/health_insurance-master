@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-image: url("https://www.acko.com/wp-content/uploads/2020/01/cashless-health-insurance.jpg.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color:#008080;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0; /* Increase length */
+        }
+
+        .navbar a {
+            display: block;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 30px; /* Increase length */
+            text-decoration: none;
+            margin: 0 20px; /* Add spacing between tabs */
+            font-size: 18px; /* Increase font size */
+        }
+
+        .navbar a:hover {
+            background-color: #000080; /* Change hover color */
+            color: white;
+        }
+        .about-container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .about-container h2 {
+            font-size: 32px;
+            color: #007acc;
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .team-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .team-member {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+        }
+
+        .team-member img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        .team-member h3 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .team-member p {
+            font-size: 16px;
+            color: #666;
+        }
+        /* Footer */
+        .footer {
+            background-color:#008080;
+            color: white;
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+            position: fixed; /* Fix footer to the bottom */
+            bottom: 0;
+            left: 0;
+            margin-top: 200px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/models">Models</a>
+        <a href="/Aboutus">About US</a>
+        <a href="/Contactus">Contact US</a>
+        <a href="/login">Register/Login</a> 
+    </div>
+
+    <div class="about-container">
+        <h2>About Us</h2>
+        <p>Welcome to our Medical Insurance Cost Predictor! We are a dedicated team of professionals passionate about helping people understand their medical insurance costs. Our mission is to provide accurate and reliable predictions to help you make informed decisions.</p>
+        <p>Our team is composed of experts in data science, machine learning, and healthcare. We believe in leveraging technology to simplify complex problems and provide user-friendly solutions.</p>
+        
+        <div class="team-section">
+            <div class="team-member">
+                <img src="../static/Images/hassan.jpg" alt="Team Member 1">
+                <h3>Muhammad Hassan</h3>
+                <p>Data Scientist</p>
+            </div>
+            <div class="team-member">
+                <img src="../static/Images/sumera.jpg" alt="Team Member 2">
+                <h3>Sumera Kazmi</h3>
+                <p>Machine Learning Engineer</p>
+            </div>
+            <div class="team-member">
+                <img src="../static/Images/luqman.png" alt="Team Member 3">
+                <h3>Muhammad Luqman</h3>
+                <p>Machine Learning Engineer</p>
+            </div>
+            
+            <!-- Add more team members as needed -->
+        </div>
+    </div>
+    <div class="footer">
+        <p>&copy; 2024 Medical Insurance Cost Model. All rights reserved.</p>
+    </div>
+</body>
+</html>

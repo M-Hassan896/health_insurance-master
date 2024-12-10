@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Insurance Cost Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Background Image */
+        body {
+            background-image: url("https://www.acko.com/wp-content/uploads/2020/01/cashless-health-insurance.jpg.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Align items to the top */
+            align-items: center;
+        }
+
+        /* Heading Font */
+        .container-heading {
+            margin: 0;
+            padding-top: 100px; /* Add padding to move the heading below the navbar */
+        }
+
+        .results {
+            margin: 0;
+            
+            display: flex;
+            margin-bottom: 110px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh; /* Ensure full viewport height */
+            box-sizing: border-box; /* Include padding in the element's total height and width */
+        }
+
+        .heading_font {
+            color: black;
+            font-family: 'Pacifico', cursive;
+            font-size: 50px;
+            font-weight: normal;
+        }
+
+        /* Navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #008080;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0; /* Increase length */
+        }
+
+        .navbar a {
+            display: block;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 30px; /* Increase length */
+            text-decoration: none;
+            margin: 0 20px; /* Add spacing between tabs */
+            font-size: 18px; /* Increase font size */
+        }
+
+        .navbar a:hover {
+            background-color: #000080; /* Change hover color */
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #008080;
+            color: white;
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+            position: fixed; /* Fix footer to the bottom */
+            bottom: 0;
+            left: 0;
+            margin-top: 200px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/models">Models</a>
+        <a href="/Aboutus">About US</a>
+        <a href="/Contactus">Contact US</a>
+        <a href="/login">Register/Login</a>
+    </div>
+    <div style="color:black;" class="container">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2 class='container-heading'><span class="heading_font">Medical Insurance Cost Predictor</span></h2>
+
+            <!-- Result -->
+            <div style="color:black;" class="results">
+                <h2>{{prediction_text}}</h2>
+            </div>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Medical Insurance Cost Model. All rights reserved.</p>
+    </div>
+</body>
+
+</html>

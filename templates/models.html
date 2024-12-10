@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Comparison</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation bar */
+        .navbar {
+            overflow: hidden;
+            background-color: #008080;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+        }
+
+        .navbar a {
+            display: block;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #005454;
+        }
+
+        .container {
+            flex: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 80px;
+            padding-bottom: 60px; /* Add padding at the bottom to ensure content is above the footer */
+        }
+
+        .model-section {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .model-section h2 {
+            font-size: 28px;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .model-section p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .results-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .results-section img {
+            margin: 10px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .evaluation-metrics {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .evaluation-metrics h2 {
+            font-size: 28px;
+            color: #0066cc;
+            margin-bottom: 20px;
+        }
+
+        .evaluation-metrics img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #008080;
+            color: white;
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+            position: relative; /* Change to relative */
+            bottom: 0;
+            left: 0;
+            margin-top: auto; /* Allows footer to push to bottom if content is short */
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/models">Models</a>
+        <a href="/Aboutus">About US</a>
+        <a href="/Contactus">Contact US</a>
+        <a href="/login">Register/Login</a>
+    </div>
+
+    <div class="container">
+        <div class="model-section">
+            <h2>Linear Regression</h2>
+            <p>Linear regression is a fundamental statistical method used to model the relationship between a dependent variable and one or more independent variables by fitting a linear equation to the observed data. The goal is to find the best-fitting straight line through the data points that minimizes the sum of the squared differences between the observed values and the values predicted by the line.This technique assumes a linear relationship between the dependent and independent variables, making it simple and easy to interpret. However, it is sensitive to outliers and can be less effective if the relationship between variables is non-linear.</p>
+        </div>
+
+        <div class="model-section">
+            <h2>Lasso Regression</h2>
+            <p>Lasso (Least Absolute Shrinkage and Selection Operator) regression is an extension of linear regression that includes an L1 regularization term in the loss function. This penalty term is the absolute sum of the coefficients, which encourages the model to shrink some of the coefficients to exactly zero. As a result, Lasso performs both variable selection and regularization, which helps enhance the prediction accuracy and interpretability of the model. It's particularly useful in high-dimensional datasets where some features may be irrelevant or redundant, as it helps prevent overfitting and simplifies the model.</p>
+        </div>
+
+        <div class="model-section">
+            <h2>Random Forest Regressor</h2>
+            <p>The Random Forest Regressor is an ensemble learning method that constructs a multitude of decision trees during training and outputs the average prediction of these trees. Each tree in the forest is built using a random subset of the data and features, which helps in making the model robust to overfitting. This technique captures complex, non-linear relationships and is less sensitive to noise and outliers in the data compared to individual decision trees. The random forest's ability to handle large datasets and provide feature importance rankings makes it a popular choice for various regression tasks.</p>
+        </div>
+
+        <div class="model-section">
+            <h2>XGBoost Regressor</h2>
+            <p>XGBoost (Extreme Gradient Boosting) Regressor is a powerful and efficient implementation of the gradient boosting framework. It builds an ensemble of decision trees sequentially, where each new tree attempts to correct the errors of the previous trees by optimizing a loss function. XGBoost incorporates regularization terms to control model complexity and prevent overfitting, leading to better generalization on unseen data. Known for its high performance and scalability, XGBoost is widely used in machine learning competitions and real-world applications where accuracy and speed are crucial. Its ability to handle missing data and its flexibility with various objective functions add to its robustness and versatility.</p>
+        </div>
+
+        <div class="results-section">
+            <img src="../static/Images/luinz.png" alt="Linear Regression Result 1">
+            <img src="../static/Images/randoma.png" alt="Linear Regression Result 2">
+            <img src="../static/Images/R sq.png" alt="Lasso Regression Result 1">
+            <img src="../static/Images/MSE RMSE.png" alt="Lasso Regression Result 2">
+            <img src="../static/Images/sds.png" alt="Random Forest Result 1">
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Medical Insurance Cost Model. All rights reserved.</p>
+    </div>
+</body>
+
+</html>

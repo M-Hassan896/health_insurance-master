@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Insurance Cost Model</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Background Image */
+        body {
+            background-image: url("https://www.acko.com/wp-content/uploads/2020/01/cashless-health-insurance.jpg.webp");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed; /* Keep background fixed while scrolling */
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        /* Header */
+        .header {
+            background-color:#008080;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 20px 0; /* Increase length */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px; /* Limit width to keep it centered */
+        }
+
+        .navbar a {
+            display: block;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 30px; /* Increase length */
+            text-decoration: none;
+            margin: 0 20px; /* Add spacing between tabs */
+            font-size: 18px; /* Increase font size */
+        }
+
+        .navbar a:hover {
+            background-color: #000080; /* Change hover color */
+            color: white;
+        }
+
+        /* Container */
+        .container {
+            text-align: center;
+            margin-top: 200px; /* Adjust as per your needs */
+        }
+
+        /* Form fields */
+        input {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 18px;
+            text-align: center;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+            background-color: #007acc;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #005fa3;
+        }
+
+        /* Footer */
+        .footer {
+            background-color:#008080;
+            color: white;
+            padding: 20px 0;
+            width: 100%;
+            text-align: center;
+            position: fixed; /* Fix footer to the bottom */
+            bottom: 0;
+            left: 0;
+            margin-top: 200px;
+        }
+
+        .footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/models">Models</a>
+            <a href="/Aboutus">About US</a>
+            <a href="/Contactus">Contact US</a>
+            <a href="/login">Register/Login</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class='container-heading'><span class="heading_font">Medical Insurance Cost Predictor</span></h2>
+    </div>
+
+    <div class="ml-container">
+        <form action="/predict" method="post">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" placeholder="in years" required><br>
+
+            <label for="sex">Sex (1=Male, 0=Female):</label>
+            <input type="number" id="sex" name="sex" required><br>
+
+            <label for="smoker">Smoker (1=Non-smoker, 0=Smoker):</label>
+            <input type="number" id="smoker" name="smoker" required><br>
+
+            <label for="bmi">Body Mass Index (BMI):</label>
+            <input type="number" step="0.1" id="bmi" name="bmi" required><br>
+
+            <label for="children">Number of Children:</label>
+            <input type="number" id="children" name="children" required><br>
+
+            <label for="region">Region:</label>
+            <select id="region" name="region" required>
+                <option value="0">Southeast</option>
+                <option value="1">Southwest</option>
+                <option value="2">Northeast</option>
+                <option value="3">Northwest</option>
+            </select><br>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2024 Medical Insurance Cost Model. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
